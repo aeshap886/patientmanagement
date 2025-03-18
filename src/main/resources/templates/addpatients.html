@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Add patients</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/styles.css}">
+</head>
+<body>
+	<div align="center">
+	<h1>ADD PATIENTS</h1>
+	<form action="#" th:action="@{/patient/addpatients}" th:object="${patient}" method="post">
+	<label>Patient Name:</label>
+	<input type="text" th:field="*{name} "required/><br/>
+
+	<label>Patient Age:</label>
+	<input type="text" th:field="*{age}" required/><br/>
+	<label>Disease:</label>
+	<input type="text" th:field="*{disease}" required/><br/>
+	
+	<button type="add">ADD</button>
+	</form>
+	</div>
+</body>
+</html>
