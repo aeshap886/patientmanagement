@@ -8,7 +8,7 @@
 <body>
 	<div align="center">
 	<h1>ADD PATIENTS</h1>
-	<form action="#" th:action="@{/patient/addpatients}" th:object="${patient}" method="post">
+	<form action="#" th:action="@{/hospital/patients}" th:object="${patient}" method="post">
 	<label>Patient Name:</label>
 	<input type="text" th:field="*{name} "required/><br/>
 
@@ -16,6 +16,10 @@
 	<input type="text" th:field="*{age}" required/><br/>
 	<label>Disease:</label>
 	<input type="text" th:field="*{disease}" required/><br/>
+	<label>DOCTOR</label>
+	<select name="doctorName">
+   <option th:each="doctorName:${doctors}" th:field="*{doctorName}" th:value="${doctorName}" th:text="${doctorName}"></option></select>	
+
 	
 	<button type="add">ADD</button>
 	</form>

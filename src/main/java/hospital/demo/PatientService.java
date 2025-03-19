@@ -35,4 +35,7 @@ public class PatientService {
 		// TODO Auto-generated method stub
 		return null;
 	}
+	public List<String>getAlldoctors(){
+		return patientRepository.findDistinctDoctors();
+	}
 }
